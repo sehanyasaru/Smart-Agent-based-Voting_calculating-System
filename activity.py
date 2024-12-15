@@ -4,11 +4,20 @@ from mesa.time import BaseScheduler
 import os
 import random
 import cv2
+from owlready2 import *
 from imutils import contours
 
 comm = MPI.COMM_WORLD
 rank = comm.Get_rank()
 size = comm.Get_size()
+
+GALLE_RANGE = range(1, 11)
+HAMBANTOTA_RANGE = range(11, 15)
+MONERAGALA_RANGE = range(15, 18)
+
+
+ontology = get_ontology(r"C:\Users\User\Desktop\CSAT\Voting.owl").load()
+
 
 num_datasets = 17
 parties = ["PartyA", "PartyB", "PartyC", "PartyD", "PartyE", "PartyF"]
@@ -19,14 +28,7 @@ class CameraAgent(Agent):
         super().__init__(unique_id, model)
         self.dataset_path = dataset_path
         self.counting_agent = counting_agent
-        # self.local_vote_counts = {
-        #     "PartyA": 0,
-        #     "PartyB": 0,
-        #     "PartyC": 0,
-        #     "PartyD": 0,
-        #     "PartyE": 0,
-        #     "PartyF": 0
-        # }
+
 
     def process_images(self):
         all_images = []
@@ -35,9 +37,14 @@ class CameraAgent(Agent):
                 if file.endswith(('.jpg', '.png', '.jpeg')):
                     all_images.append(os.path.join(subdir, file))
 
-        random.shuffle(all_images)  # Shuffle images
 
-        # Process each shuffled image
+        remaining_images = all_images[len(parties):]
+
+        for i, party in enumerate(parties):
+            self.counting_agent.receive_vote(party)
+        random.shuffle(remaining_images)
+
+
         for image_path in all_images:
             image = cv2.imread(image_path)
             dim = (1398, 1783)
@@ -64,14 +71,10 @@ class CameraAgent(Agent):
             row = []
             prevX = 0
             current_row_index = -1
-            current_column_index = -1
             column_centroids = []
             value = 0
             value1 = 0
-            approxval = None
             processed_centroids = []
-            outx = 0
-            outy = 0
             size = 0
             party = None
             terminate_main_loop = False
@@ -131,18 +134,13 @@ class CameraAgent(Agent):
                                             value += 1
                                             prevX = cX
                                             value1 = crosscount
-                                            approxval = approx
                                             size = len(approx)
-                                            outx = x
-                                            outy = y
+
                                         else:
                                             if prevX == cX:
                                                 value -= 1
                                                 value1 = crosscount
-                                                approxval = approx
                                                 size = len(approx)
-                                                outx = x
-                                                outy = y
                                                 value += 1
                                             else:
                                                 value += 1
@@ -174,13 +172,13 @@ class CameraAgent(Agent):
 
                 if party:
                     self.counting_agent.receive_vote(party)
-        # return self.local_vote_counts
+
 
 
 class CountingAgent(Agent):
     def __init__(self, unique_id, model):
         super().__init__(unique_id, model)
-        self.vote_count = {party: 0 for party in parties}
+        self.vote_count = {party: -1 for party in parties}
 
     def receive_vote(self, party):
         if party in self.vote_count:
@@ -204,6 +202,23 @@ class DivisionModel(Model):
     def step(self):
         self.camera_agent.process_images()
         return self.counting_agent.get_count()
+def update_ontology(district, dataset_id, votes):
+    try:
+        agent_name = f"PollingAgent{dataset_id}"
+        agent = getattr(ontology, agent_name, None)
+        if agent:
+            for party, count in votes.items():
+                vote_property = f"Votecount{party}"
+                vote_value = getattr(agent, vote_property, None)
+
+                if isinstance(vote_value, list):
+                    vote_value = None
+                setattr(agent, vote_property, count)
+
+        else:
+            raise AttributeError(f"PollingAgent{dataset_id} not found in ontology.")
+    except Exception as e:
+        print(f"Error updating ontology for {district} and dataset {dataset_id}: {e}")
 
 
 # Main MPI + Mesa Execution
@@ -211,19 +226,32 @@ if __name__ == "__main__":
     dataset_root = "C:\\Users\\User\\Desktop\\New Votes DataSet"
     num_datasets = 17
 
-    if rank == 0:  # polling agent
+    if rank == 0:
 
-        results = {}
+        district_results = {
+            "GalleDistrictAgent": {},
+            "HambantotaDistrictAgent": {},
+            "MoneragalaDistrictAgent": {}
+        }
 
         for i in range(1, size):
-            if i <= num_datasets:
+            if i in GALLE_RANGE:
                 result = comm.recv(source=i, tag=i)
-                results[f"Dataset_{i}"] = result
+                district_results["GalleDistrictAgent"][f"Dataset_{i}"] = result
+            elif i in HAMBANTOTA_RANGE:
+                result = comm.recv(source=i, tag=i)
+                district_results["HambantotaDistrictAgent"][f"Dataset_{i}"] = result
+            elif i in MONERAGALA_RANGE:
+                result = comm.recv(source=i, tag=i)
+                district_results["MoneragalaDistrictAgent"][f"Dataset_{i}"] = result
+            update_ontology("DistrictAgent", i, result)
+        ontology.save(file="Updated_Voting.owl", format="rdfxml")
 
-        # Print aggregated results
-        print("Final Results:")
-        for dataset, votes in results.items():
-            print(f"{dataset}: {votes}")
+        print("\nFinal Results:")
+        for district, datasets in district_results.items():
+            print(f"\n{district}:")
+            for dataset, votes in datasets.items():
+                print(f"  {dataset}: {votes}")
 
     else:
 
