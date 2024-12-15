@@ -10,22 +10,25 @@ comm = MPI.COMM_WORLD
 rank = comm.Get_rank()
 size = comm.Get_size()
 
+num_datasets = 17
+parties = ["PartyA", "PartyB", "PartyC", "PartyD", "PartyE", "PartyF"]
 
-class DatasetAgent(Agent):
-    def __init__(self, unique_id, model, dataset_path):
+
+class CameraAgent(Agent):
+    def __init__(self, unique_id, model, dataset_path, counting_agent):
         super().__init__(unique_id, model)
         self.dataset_path = dataset_path
-        self.local_vote_counts = {
-            "PartyA": 0,
-            "PartyB": 0,
-            "PartyC": 0,
-            "PartyD": 0,
-            "PartyE": 0,
-            "PartyF": 0
-        }
+        self.counting_agent = counting_agent
+        # self.local_vote_counts = {
+        #     "PartyA": 0,
+        #     "PartyB": 0,
+        #     "PartyC": 0,
+        #     "PartyD": 0,
+        #     "PartyE": 0,
+        #     "PartyF": 0
+        # }
 
     def process_images(self):
-        # Gather all images in the dataset and shuffle
         all_images = []
         for subdir, dirs, files in os.walk(self.dataset_path):
             for file in files:
@@ -170,25 +173,37 @@ class DatasetAgent(Agent):
                         party = "PartyF"
 
                 if party:
-                    self.local_vote_counts[party] += 1
-        return self.local_vote_counts
-
-    def step(self):
-        self.process_images()
+                    self.counting_agent.receive_vote(party)
+        # return self.local_vote_counts
 
 
+class CountingAgent(Agent):
+    def __init__(self, unique_id, model):
+        super().__init__(unique_id, model)
+        self.vote_count = {party: 0 for party in parties}
 
-class DatasetModel(Model):
+    def receive_vote(self, party):
+        if party in self.vote_count:
+            self.vote_count[party] += 1
+
+    def get_count(self):
+        return self.vote_count
+
+
+class DivisionModel(Model):
     def __init__(self, dataset_path):
         self.schedule = BaseScheduler(self)
         self.dataset_path = dataset_path
 
+        self.counting_agent = CountingAgent(2,self)
+        self.schedule.add(self.counting_agent)
 
-        agent = DatasetAgent(1, self, self.dataset_path)
-        self.schedule.add(agent)
+        self.camera_agent = CameraAgent(1, self, self.dataset_path, self.counting_agent)
+        self.schedule.add(self.camera_agent)
 
     def step(self):
-        self.schedule.step()
+        self.camera_agent.process_images()
+        return self.counting_agent.get_count()
 
 
 # Main MPI + Mesa Execution
@@ -196,10 +211,9 @@ if __name__ == "__main__":
     dataset_root = "C:\\Users\\User\\Desktop\\New Votes DataSet"
     num_datasets = 17
 
-    if rank == 0:  #polling agent
-      
-        results = {}
+    if rank == 0:  # polling agent
 
+        results = {}
 
         for i in range(1, size):
             if i <= num_datasets:
@@ -216,7 +230,6 @@ if __name__ == "__main__":
         dataset_id = rank
         if dataset_id <= num_datasets:
             dataset_path = os.path.join(dataset_root, f"Dataset_{dataset_id}")
-            model = DatasetModel(dataset_path)
-            model.step()
-            result = model.schedule.agents[0].local_vote_counts
-            comm.send(result, dest=0, tag=dataset_id)
+            Division_model = DivisionModel(dataset_path)
+            results = Division_model.step()
+            comm.send(results, dest=0, tag=dataset_id)
