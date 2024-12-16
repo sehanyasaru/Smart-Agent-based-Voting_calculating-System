@@ -221,7 +221,6 @@ def update_ontology(district, dataset_id, votes):
         print(f"Error updating ontology for {district} and dataset {dataset_id}: {e}")
 
 
-# Main MPI + Mesa Execution
 if __name__ == "__main__":
     dataset_root = "C:\\Users\\User\\Desktop\\New Votes DataSet"
     num_datasets = 17
