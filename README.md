@@ -1,5 +1,7 @@
 This system is designed to automate the vote counting process in **Sri Lanka's elections** using real-time camera integration for ballot image recognition. The system uses distributed agents to process images of ballots, count votes, and update a central database for real-time results.
 
+![1733840476844](https://github.com/user-attachments/assets/be013bc4-e7f4-48f5-822b-25dce5b72f9b)
+
 ### Key Features:
 
 1. **Mobile Integration:** Capture ballot images using a mobile camera and send them to the server.
