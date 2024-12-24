@@ -1,0 +1,1281 @@
+<?xml version="1.0"?>
+<rdf:RDF xmlns="http://www.semanticweb.org/user/ontologies/2024/11/VizoVote/"
+     xml:base="http://www.semanticweb.org/user/ontologies/2024/11/VizoVote/"
+     xmlns:owl="http://www.w3.org/2002/07/owl#"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+     xmlns:xml="http://www.w3.org/XML/1998/namespace"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+     xmlns:untitled-ontology-6="http://www.semanticweb.org/user/ontologies/2024/11/untitled-ontology-6#">
+    <owl:Ontology rdf:about="http://www.semanticweb.org/user/ontologies/2024/11/untitled-ontology-6"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Object Properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.semanticweb.org/user/ontologies/2024/11/untitled-ontology-6#Workswith -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/user/ontologies/2024/11/untitled-ontology-6#Workswith">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/user/ontologies/2024/11/untitled-ontology-6#CameraAgent"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/user/ontologies/2024/11/untitled-ontology-6#CountingAgent"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/user/ontologies/2024/11/untitled-ontology-6#aggregated -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/user/ontologies/2024/11/untitled-ontology-6#aggregated">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/user/ontologies/2024/11/untitled-ontology-6#CountingAgent"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/user/ontologies/2024/11/untitled-ontology-6#PollingDivisionAgent"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/user/ontologies/2024/11/untitled-ontology-6#hasCenter -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/user/ontologies/2024/11/untitled-ontology-6#hasCenter">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/user/ontologies/2024/11/untitled-ontology-6#District"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/user/ontologies/2024/11/untitled-ontology-6#VotingCenter"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/user/ontologies/2024/11/untitled-ontology-6#hasDivisionAgent -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/user/ontologies/2024/11/untitled-ontology-6#hasDivisionAgent">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/user/ontologies/2024/11/untitled-ontology-6#VotingCenter"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/user/ontologies/2024/11/untitled-ontology-6#PollingDivisionAgent"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/user/ontologies/2024/11/untitled-ontology-6#hasWorkingAgents -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/user/ontologies/2024/11/untitled-ontology-6#hasWorkingAgents">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/user/ontologies/2024/11/untitled-ontology-6#PollingDivisionAgent"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/user/ontologies/2024/11/untitled-ontology-6#CameraAgent"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/user/ontologies/2024/11/untitled-ontology-6#CountingAgent"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/user/ontologies/2024/11/untitled-ontology-6#reported -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/user/ontologies/2024/11/untitled-ontology-6#reported">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/user/ontologies/2024/11/untitled-ontology-6#PollingDivisionAgent"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/user/ontologies/2024/11/untitled-ontology-6#DistrictAgent"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Data properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.semanticweb.org/user/ontologies/2024/11/untitled-ontology-6#TotalCountA -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/user/ontologies/2024/11/untitled-ontology-6#TotalCountA">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/user/ontologies/2024/11/untitled-ontology-6#DistrictAgent"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#integer"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/user/ontologies/2024/11/untitled-ontology-6#TotalCountB -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/user/ontologies/2024/11/untitled-ontology-6#TotalCountB">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/user/ontologies/2024/11/untitled-ontology-6#DistrictAgent"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#integer"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/user/ontologies/2024/11/untitled-ontology-6#TotalCountC -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/user/ontologies/2024/11/untitled-ontology-6#TotalCountC">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/user/ontologies/2024/11/untitled-ontology-6#DistrictAgent"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#integer"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/user/ontologies/2024/11/untitled-ontology-6#TotalCountD -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/user/ontologies/2024/11/untitled-ontology-6#TotalCountD">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/user/ontologies/2024/11/untitled-ontology-6#DistrictAgent"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#integer"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/user/ontologies/2024/11/untitled-ontology-6#TotalCountE -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/user/ontologies/2024/11/untitled-ontology-6#TotalCountE">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/user/ontologies/2024/11/untitled-ontology-6#DistrictAgent"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#integer"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/user/ontologies/2024/11/untitled-ontology-6#TotalCountF -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/user/ontologies/2024/11/untitled-ontology-6#TotalCountF">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/user/ontologies/2024/11/untitled-ontology-6#DistrictAgent"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#integer"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/user/ontologies/2024/11/untitled-ontology-6#VotecountPartyA -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/user/ontologies/2024/11/untitled-ontology-6#VotecountPartyA">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/user/ontologies/2024/11/untitled-ontology-6#PollingDivisionAgent"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#integer"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/user/ontologies/2024/11/untitled-ontology-6#VotecountPartyB -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/user/ontologies/2024/11/untitled-ontology-6#VotecountPartyB">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/user/ontologies/2024/11/untitled-ontology-6#PollingDivisionAgent"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#integer"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/user/ontologies/2024/11/untitled-ontology-6#VotecountPartyC -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/user/ontologies/2024/11/untitled-ontology-6#VotecountPartyC">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/user/ontologies/2024/11/untitled-ontology-6#PollingDivisionAgent"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#integer"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/user/ontologies/2024/11/untitled-ontology-6#VotecountPartyD -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/user/ontologies/2024/11/untitled-ontology-6#VotecountPartyD">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/user/ontologies/2024/11/untitled-ontology-6#PollingDivisionAgent"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#integer"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/user/ontologies/2024/11/untitled-ontology-6#VotecountPartyE -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/user/ontologies/2024/11/untitled-ontology-6#VotecountPartyE">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/user/ontologies/2024/11/untitled-ontology-6#PollingDivisionAgent"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#integer"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/user/ontologies/2024/11/untitled-ontology-6#VotecountPartyF -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/user/ontologies/2024/11/untitled-ontology-6#VotecountPartyF">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/user/ontologies/2024/11/untitled-ontology-6#PollingDivisionAgent"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#integer"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Classes
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.semanticweb.org/user/ontologies/2024/11/untitled-ontology-6#Agent -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/user/ontologies/2024/11/untitled-ontology-6#Agent"/>
+    
+
+
+    <!-- http://www.semanticweb.org/user/ontologies/2024/11/untitled-ontology-6#CameraAgent -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/user/ontologies/2024/11/untitled-ontology-6#CameraAgent">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/user/ontologies/2024/11/untitled-ontology-6#Agent"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/user/ontologies/2024/11/untitled-ontology-6#CountingAgent -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/user/ontologies/2024/11/untitled-ontology-6#CountingAgent">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/user/ontologies/2024/11/untitled-ontology-6#Agent"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/user/ontologies/2024/11/untitled-ontology-6#District -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/user/ontologies/2024/11/untitled-ontology-6#District">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/user/ontologies/2024/11/untitled-ontology-6#Region"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/user/ontologies/2024/11/untitled-ontology-6#DistrictAgent -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/user/ontologies/2024/11/untitled-ontology-6#DistrictAgent">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/user/ontologies/2024/11/untitled-ontology-6#Agent"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/user/ontologies/2024/11/untitled-ontology-6#PollingDivisionAgent -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/user/ontologies/2024/11/untitled-ontology-6#PollingDivisionAgent">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/user/ontologies/2024/11/untitled-ontology-6#Agent"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/user/ontologies/2024/11/untitled-ontology-6#Region -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/user/ontologies/2024/11/untitled-ontology-6#Region"/>
+    
+
+
+    <!-- http://www.semanticweb.org/user/ontologies/2024/11/untitled-ontology-6#VotingCenter -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/user/ontologies/2024/11/untitled-ontology-6#VotingCenter">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/user/ontologies/2024/11/untitled-ontology-6#Region"/>
+    </owl:Class>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Individuals
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.semanticweb.org/user/ontologies/2024/11/untitled-ontology-6#Akmeemana -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/user/ontologies/2024/11/untitled-ontology-6#Akmeemana">
+        <rdf:type rdf:resource="http://www.semanticweb.org/user/ontologies/2024/11/untitled-ontology-6#VotingCenter"/>
+        <untitled-ontology-6:hasDivisionAgent rdf:resource="http://www.semanticweb.org/user/ontologies/2024/11/untitled-ontology-6#PollingAgent1"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/user/ontologies/2024/11/untitled-ontology-6#Ambalangoda -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/user/ontologies/2024/11/untitled-ontology-6#Ambalangoda">
+        <rdf:type rdf:resource="http://www.semanticweb.org/user/ontologies/2024/11/untitled-ontology-6#VotingCenter"/>
+        <untitled-ontology-6:hasDivisionAgent rdf:resource="http://www.semanticweb.org/user/ontologies/2024/11/untitled-ontology-6#PollingAgent2"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/user/ontologies/2024/11/untitled-ontology-6#Baddegama -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/user/ontologies/2024/11/untitled-ontology-6#Baddegama">
+        <rdf:type rdf:resource="http://www.semanticweb.org/user/ontologies/2024/11/untitled-ontology-6#VotingCenter"/>
+        <untitled-ontology-6:hasDivisionAgent rdf:resource="http://www.semanticweb.org/user/ontologies/2024/11/untitled-ontology-6#PollingAgent3"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/user/ontologies/2024/11/untitled-ontology-6#Balapitiya -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/user/ontologies/2024/11/untitled-ontology-6#Balapitiya">
+        <rdf:type rdf:resource="http://www.semanticweb.org/user/ontologies/2024/11/untitled-ontology-6#VotingCenter"/>
+        <untitled-ontology-6:hasDivisionAgent rdf:resource="http://www.semanticweb.org/user/ontologies/2024/11/untitled-ontology-6#PollingAgent4"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/user/ontologies/2024/11/untitled-ontology-6#Beliatta -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/user/ontologies/2024/11/untitled-ontology-6#Beliatta">
+        <rdf:type rdf:resource="http://www.semanticweb.org/user/ontologies/2024/11/untitled-ontology-6#VotingCenter"/>
+        <untitled-ontology-6:hasDivisionAgent rdf:resource="http://www.semanticweb.org/user/ontologies/2024/11/untitled-ontology-6#PollingAgent11"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/user/ontologies/2024/11/untitled-ontology-6#Bentara-Elpitiya -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/user/ontologies/2024/11/untitled-ontology-6#Bentara-Elpitiya">
+        <rdf:type rdf:resource="http://www.semanticweb.org/user/ontologies/2024/11/untitled-ontology-6#VotingCenter"/>
+        <untitled-ontology-6:hasDivisionAgent rdf:resource="http://www.semanticweb.org/user/ontologies/2024/11/untitled-ontology-6#PollingAgent5"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/user/ontologies/2024/11/untitled-ontology-6#Bibila -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/user/ontologies/2024/11/untitled-ontology-6#Bibila">
+        <rdf:type rdf:resource="http://www.semanticweb.org/user/ontologies/2024/11/untitled-ontology-6#VotingCenter"/>
+        <untitled-ontology-6:hasDivisionAgent rdf:resource="http://www.semanticweb.org/user/ontologies/2024/11/untitled-ontology-6#PollingAgent15"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/user/ontologies/2024/11/untitled-ontology-6#CamerAgent16 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/user/ontologies/2024/11/untitled-ontology-6#CamerAgent16">
+        <rdf:type rdf:resource="http://www.semanticweb.org/user/ontologies/2024/11/untitled-ontology-6#CameraAgent"/>
+        <untitled-ontology-6:Workswith rdf:resource="http://www.semanticweb.org/user/ontologies/2024/11/untitled-ontology-6#CountingAgent16"/>
+        <untitled-ontology-6:aggregated rdf:resource="http://www.semanticweb.org/user/ontologies/2024/11/untitled-ontology-6#PollingAgent16"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/user/ontologies/2024/11/untitled-ontology-6#CameraAgent10 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/user/ontologies/2024/11/untitled-ontology-6#CameraAgent10">
+        <rdf:type rdf:resource="http://www.semanticweb.org/user/ontologies/2024/11/untitled-ontology-6#CameraAgent"/>
+        <untitled-ontology-6:Workswith rdf:resource="http://www.semanticweb.org/user/ontologies/2024/11/untitled-ontology-6#CountingAgent10"/>
+        <untitled-ontology-6:aggregated rdf:resource="http://www.semanticweb.org/user/ontologies/2024/11/untitled-ontology-6#PollingAgent10"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/user/ontologies/2024/11/untitled-ontology-6#CameraAgent11 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/user/ontologies/2024/11/untitled-ontology-6#CameraAgent11">
+        <rdf:type rdf:resource="http://www.semanticweb.org/user/ontologies/2024/11/untitled-ontology-6#CameraAgent"/>
+        <untitled-ontology-6:Workswith rdf:resource="http://www.semanticweb.org/user/ontologies/2024/11/untitled-ontology-6#CountingAgent11"/>
+        <untitled-ontology-6:aggregated rdf:resource="http://www.semanticweb.org/user/ontologies/2024/11/untitled-ontology-6#PollingAgent11"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/user/ontologies/2024/11/untitled-ontology-6#CameraAgent12 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/user/ontologies/2024/11/untitled-ontology-6#CameraAgent12">
+        <rdf:type rdf:resource="http://www.semanticweb.org/user/ontologies/2024/11/untitled-ontology-6#CameraAgent"/>
+        <untitled-ontology-6:Workswith rdf:resource="http://www.semanticweb.org/user/ontologies/2024/11/untitled-ontology-6#CountingAgent12"/>
+        <untitled-ontology-6:aggregated rdf:resource="http://www.semanticweb.org/user/ontologies/2024/11/untitled-ontology-6#PollingAgent12"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/user/ontologies/2024/11/untitled-ontology-6#CameraAgent13 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/user/ontologies/2024/11/untitled-ontology-6#CameraAgent13">
+        <rdf:type rdf:resource="http://www.semanticweb.org/user/ontologies/2024/11/untitled-ontology-6#CameraAgent"/>
+        <untitled-ontology-6:Workswith rdf:resource="http://www.semanticweb.org/user/ontologies/2024/11/untitled-ontology-6#CameraAgent13"/>
+        <untitled-ontology-6:aggregated rdf:resource="http://www.semanticweb.org/user/ontologies/2024/11/untitled-ontology-6#PollingAgent13"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/user/ontologies/2024/11/untitled-ontology-6#CameraAgent14 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/user/ontologies/2024/11/untitled-ontology-6#CameraAgent14">
+        <rdf:type rdf:resource="http://www.semanticweb.org/user/ontologies/2024/11/untitled-ontology-6#CameraAgent"/>
+        <untitled-ontology-6:Workswith rdf:resource="http://www.semanticweb.org/user/ontologies/2024/11/untitled-ontology-6#CameraAgent14"/>
+        <untitled-ontology-6:aggregated rdf:resource="http://www.semanticweb.org/user/ontologies/2024/11/untitled-ontology-6#PollingAgent14"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/user/ontologies/2024/11/untitled-ontology-6#CameraAgent15 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/user/ontologies/2024/11/untitled-ontology-6#CameraAgent15">
+        <rdf:type rdf:resource="http://www.semanticweb.org/user/ontologies/2024/11/untitled-ontology-6#CameraAgent"/>
+        <untitled-ontology-6:Workswith rdf:resource="http://www.semanticweb.org/user/ontologies/2024/11/untitled-ontology-6#CountingAgent15"/>
+        <untitled-ontology-6:aggregated rdf:resource="http://www.semanticweb.org/user/ontologies/2024/11/untitled-ontology-6#PollingAgent15"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/user/ontologies/2024/11/untitled-ontology-6#CameraAgent17 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/user/ontologies/2024/11/untitled-ontology-6#CameraAgent17">
+        <rdf:type rdf:resource="http://www.semanticweb.org/user/ontologies/2024/11/untitled-ontology-6#CameraAgent"/>
+        <untitled-ontology-6:Workswith rdf:resource="http://www.semanticweb.org/user/ontologies/2024/11/untitled-ontology-6#CountingAgent17"/>
+        <untitled-ontology-6:aggregated rdf:resource="http://www.semanticweb.org/user/ontologies/2024/11/untitled-ontology-6#PollingAgent17"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/user/ontologies/2024/11/untitled-ontology-6#CameraAgent2 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/user/ontologies/2024/11/untitled-ontology-6#CameraAgent2">
+        <rdf:type rdf:resource="http://www.semanticweb.org/user/ontologies/2024/11/untitled-ontology-6#CameraAgent"/>
+        <untitled-ontology-6:Workswith rdf:resource="http://www.semanticweb.org/user/ontologies/2024/11/untitled-ontology-6#CountingAgent2"/>
+        <untitled-ontology-6:aggregated rdf:resource="http://www.semanticweb.org/user/ontologies/2024/11/untitled-ontology-6#PollingAgent2"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/user/ontologies/2024/11/untitled-ontology-6#CameraAgent3 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/user/ontologies/2024/11/untitled-ontology-6#CameraAgent3">
+        <rdf:type rdf:resource="http://www.semanticweb.org/user/ontologies/2024/11/untitled-ontology-6#CameraAgent"/>
+        <untitled-ontology-6:Workswith rdf:resource="http://www.semanticweb.org/user/ontologies/2024/11/untitled-ontology-6#CountingAgent3"/>
+        <untitled-ontology-6:aggregated rdf:resource="http://www.semanticweb.org/user/ontologies/2024/11/untitled-ontology-6#PollingAgent3"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/user/ontologies/2024/11/untitled-ontology-6#CameraAgent4 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/user/ontologies/2024/11/untitled-ontology-6#CameraAgent4">
+        <rdf:type rdf:resource="http://www.semanticweb.org/user/ontologies/2024/11/untitled-ontology-6#CameraAgent"/>
+        <untitled-ontology-6:Workswith rdf:resource="http://www.semanticweb.org/user/ontologies/2024/11/untitled-ontology-6#CountingAgent4"/>
+        <untitled-ontology-6:aggregated rdf:resource="http://www.semanticweb.org/user/ontologies/2024/11/untitled-ontology-6#PollingAgent4"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/user/ontologies/2024/11/untitled-ontology-6#CameraAgent5 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/user/ontologies/2024/11/untitled-ontology-6#CameraAgent5">
+        <rdf:type rdf:resource="http://www.semanticweb.org/user/ontologies/2024/11/untitled-ontology-6#CameraAgent"/>
+        <untitled-ontology-6:Workswith rdf:resource="http://www.semanticweb.org/user/ontologies/2024/11/untitled-ontology-6#CountingAgent5"/>
+        <untitled-ontology-6:aggregated rdf:resource="http://www.semanticweb.org/user/ontologies/2024/11/untitled-ontology-6#PollingAgent5"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/user/ontologies/2024/11/untitled-ontology-6#CameraAgent6 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/user/ontologies/2024/11/untitled-ontology-6#CameraAgent6">
+        <rdf:type rdf:resource="http://www.semanticweb.org/user/ontologies/2024/11/untitled-ontology-6#CameraAgent"/>
+        <untitled-ontology-6:Workswith rdf:resource="http://www.semanticweb.org/user/ontologies/2024/11/untitled-ontology-6#CountingAgent6"/>
+        <untitled-ontology-6:aggregated rdf:resource="http://www.semanticweb.org/user/ontologies/2024/11/untitled-ontology-6#PollingAgent6"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/user/ontologies/2024/11/untitled-ontology-6#CameraAgent8 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/user/ontologies/2024/11/untitled-ontology-6#CameraAgent8">
+        <rdf:type rdf:resource="http://www.semanticweb.org/user/ontologies/2024/11/untitled-ontology-6#CameraAgent"/>
+        <untitled-ontology-6:Workswith rdf:resource="http://www.semanticweb.org/user/ontologies/2024/11/untitled-ontology-6#CountingAgent8"/>
+        <untitled-ontology-6:aggregated rdf:resource="http://www.semanticweb.org/user/ontologies/2024/11/untitled-ontology-6#PollingAgent8"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/user/ontologies/2024/11/untitled-ontology-6#CameraAgent9 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/user/ontologies/2024/11/untitled-ontology-6#CameraAgent9">
+        <rdf:type rdf:resource="http://www.semanticweb.org/user/ontologies/2024/11/untitled-ontology-6#CameraAgent"/>
+        <untitled-ontology-6:Workswith rdf:resource="http://www.semanticweb.org/user/ontologies/2024/11/untitled-ontology-6#CountingAgent9"/>
+        <untitled-ontology-6:aggregated rdf:resource="http://www.semanticweb.org/user/ontologies/2024/11/untitled-ontology-6#PollingAgent9"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/user/ontologies/2024/11/untitled-ontology-6#CountingAgent1 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/user/ontologies/2024/11/untitled-ontology-6#CountingAgent1">
+        <rdf:type rdf:resource="http://www.semanticweb.org/user/ontologies/2024/11/untitled-ontology-6#CountingAgent"/>
+        <untitled-ontology-6:aggregated rdf:resource="http://www.semanticweb.org/user/ontologies/2024/11/untitled-ontology-6#PollingAgent1"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/user/ontologies/2024/11/untitled-ontology-6#CountingAgent10 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/user/ontologies/2024/11/untitled-ontology-6#CountingAgent10">
+        <rdf:type rdf:resource="http://www.semanticweb.org/user/ontologies/2024/11/untitled-ontology-6#CountingAgent"/>
+        <untitled-ontology-6:aggregated rdf:resource="http://www.semanticweb.org/user/ontologies/2024/11/untitled-ontology-6#PollingAgent10"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/user/ontologies/2024/11/untitled-ontology-6#CountingAgent11 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/user/ontologies/2024/11/untitled-ontology-6#CountingAgent11">
+        <rdf:type rdf:resource="http://www.semanticweb.org/user/ontologies/2024/11/untitled-ontology-6#CountingAgent"/>
+        <untitled-ontology-6:aggregated rdf:resource="http://www.semanticweb.org/user/ontologies/2024/11/untitled-ontology-6#PollingAgent11"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/user/ontologies/2024/11/untitled-ontology-6#CountingAgent12 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/user/ontologies/2024/11/untitled-ontology-6#CountingAgent12">
+        <rdf:type rdf:resource="http://www.semanticweb.org/user/ontologies/2024/11/untitled-ontology-6#CountingAgent"/>
+        <untitled-ontology-6:aggregated rdf:resource="http://www.semanticweb.org/user/ontologies/2024/11/untitled-ontology-6#PollingAgent12"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/user/ontologies/2024/11/untitled-ontology-6#CountingAgent13 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/user/ontologies/2024/11/untitled-ontology-6#CountingAgent13">
+        <rdf:type rdf:resource="http://www.semanticweb.org/user/ontologies/2024/11/untitled-ontology-6#CountingAgent"/>
+        <untitled-ontology-6:aggregated rdf:resource="http://www.semanticweb.org/user/ontologies/2024/11/untitled-ontology-6#PollingAgent13"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/user/ontologies/2024/11/untitled-ontology-6#CountingAgent14 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/user/ontologies/2024/11/untitled-ontology-6#CountingAgent14">
+        <rdf:type rdf:resource="http://www.semanticweb.org/user/ontologies/2024/11/untitled-ontology-6#CountingAgent"/>
+        <untitled-ontology-6:aggregated rdf:resource="http://www.semanticweb.org/user/ontologies/2024/11/untitled-ontology-6#PollingAgent14"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/user/ontologies/2024/11/untitled-ontology-6#CountingAgent15 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/user/ontologies/2024/11/untitled-ontology-6#CountingAgent15">
+        <rdf:type rdf:resource="http://www.semanticweb.org/user/ontologies/2024/11/untitled-ontology-6#CountingAgent"/>
+        <untitled-ontology-6:aggregated rdf:resource="http://www.semanticweb.org/user/ontologies/2024/11/untitled-ontology-6#PollingAgent15"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/user/ontologies/2024/11/untitled-ontology-6#CountingAgent16 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/user/ontologies/2024/11/untitled-ontology-6#CountingAgent16">
+        <rdf:type rdf:resource="http://www.semanticweb.org/user/ontologies/2024/11/untitled-ontology-6#CountingAgent"/>
+        <untitled-ontology-6:aggregated rdf:resource="http://www.semanticweb.org/user/ontologies/2024/11/untitled-ontology-6#PollingAgent16"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/user/ontologies/2024/11/untitled-ontology-6#CountingAgent17 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/user/ontologies/2024/11/untitled-ontology-6#CountingAgent17">
+        <rdf:type rdf:resource="http://www.semanticweb.org/user/ontologies/2024/11/untitled-ontology-6#CountingAgent"/>
+        <untitled-ontology-6:aggregated rdf:resource="http://www.semanticweb.org/user/ontologies/2024/11/untitled-ontology-6#PollingAgent17"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/user/ontologies/2024/11/untitled-ontology-6#CountingAgent2 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/user/ontologies/2024/11/untitled-ontology-6#CountingAgent2">
+        <rdf:type rdf:resource="http://www.semanticweb.org/user/ontologies/2024/11/untitled-ontology-6#CountingAgent"/>
+        <untitled-ontology-6:aggregated rdf:resource="http://www.semanticweb.org/user/ontologies/2024/11/untitled-ontology-6#PollingAgent2"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/user/ontologies/2024/11/untitled-ontology-6#CountingAgent3 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/user/ontologies/2024/11/untitled-ontology-6#CountingAgent3">
+        <rdf:type rdf:resource="http://www.semanticweb.org/user/ontologies/2024/11/untitled-ontology-6#CountingAgent"/>
+        <untitled-ontology-6:aggregated rdf:resource="http://www.semanticweb.org/user/ontologies/2024/11/untitled-ontology-6#PollingAgent3"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/user/ontologies/2024/11/untitled-ontology-6#CountingAgent4 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/user/ontologies/2024/11/untitled-ontology-6#CountingAgent4">
+        <rdf:type rdf:resource="http://www.semanticweb.org/user/ontologies/2024/11/untitled-ontology-6#CountingAgent"/>
+        <untitled-ontology-6:aggregated rdf:resource="http://www.semanticweb.org/user/ontologies/2024/11/untitled-ontology-6#PollingAgent4"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/user/ontologies/2024/11/untitled-ontology-6#CountingAgent5 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/user/ontologies/2024/11/untitled-ontology-6#CountingAgent5">
+        <rdf:type rdf:resource="http://www.semanticweb.org/user/ontologies/2024/11/untitled-ontology-6#CountingAgent"/>
+        <untitled-ontology-6:aggregated rdf:resource="http://www.semanticweb.org/user/ontologies/2024/11/untitled-ontology-6#PollingAgent5"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/user/ontologies/2024/11/untitled-ontology-6#CountingAgent6 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/user/ontologies/2024/11/untitled-ontology-6#CountingAgent6">
+        <rdf:type rdf:resource="http://www.semanticweb.org/user/ontologies/2024/11/untitled-ontology-6#CountingAgent"/>
+        <untitled-ontology-6:aggregated rdf:resource="http://www.semanticweb.org/user/ontologies/2024/11/untitled-ontology-6#PollingAgent6"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/user/ontologies/2024/11/untitled-ontology-6#CountingAgent7 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/user/ontologies/2024/11/untitled-ontology-6#CountingAgent7">
+        <rdf:type rdf:resource="http://www.semanticweb.org/user/ontologies/2024/11/untitled-ontology-6#CountingAgent"/>
+        <untitled-ontology-6:aggregated rdf:resource="http://www.semanticweb.org/user/ontologies/2024/11/untitled-ontology-6#PollingAgent7"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/user/ontologies/2024/11/untitled-ontology-6#CountingAgent8 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/user/ontologies/2024/11/untitled-ontology-6#CountingAgent8">
+        <rdf:type rdf:resource="http://www.semanticweb.org/user/ontologies/2024/11/untitled-ontology-6#CountingAgent"/>
+        <untitled-ontology-6:aggregated rdf:resource="http://www.semanticweb.org/user/ontologies/2024/11/untitled-ontology-6#PollingAgent8"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/user/ontologies/2024/11/untitled-ontology-6#CountingAgent9 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/user/ontologies/2024/11/untitled-ontology-6#CountingAgent9">
+        <rdf:type rdf:resource="http://www.semanticweb.org/user/ontologies/2024/11/untitled-ontology-6#CountingAgent"/>
+        <untitled-ontology-6:aggregated rdf:resource="http://www.semanticweb.org/user/ontologies/2024/11/untitled-ontology-6#PollingAgent9"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/user/ontologies/2024/11/untitled-ontology-6#Galle -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/user/ontologies/2024/11/untitled-ontology-6#Galle">
+        <rdf:type rdf:resource="http://www.semanticweb.org/user/ontologies/2024/11/untitled-ontology-6#District"/>
+        <untitled-ontology-6:hasCenter rdf:resource="http://www.semanticweb.org/user/ontologies/2024/11/untitled-ontology-6#Akmeemana"/>
+        <untitled-ontology-6:hasCenter rdf:resource="http://www.semanticweb.org/user/ontologies/2024/11/untitled-ontology-6#Ambalangoda"/>
+        <untitled-ontology-6:hasCenter rdf:resource="http://www.semanticweb.org/user/ontologies/2024/11/untitled-ontology-6#Baddegama"/>
+        <untitled-ontology-6:hasCenter rdf:resource="http://www.semanticweb.org/user/ontologies/2024/11/untitled-ontology-6#Balapitiya"/>
+        <untitled-ontology-6:hasCenter rdf:resource="http://www.semanticweb.org/user/ontologies/2024/11/untitled-ontology-6#Bentara-Elpitiya"/>
+        <untitled-ontology-6:hasCenter rdf:resource="http://www.semanticweb.org/user/ontologies/2024/11/untitled-ontology-6#Galle_div"/>
+        <untitled-ontology-6:hasCenter rdf:resource="http://www.semanticweb.org/user/ontologies/2024/11/untitled-ontology-6#Habaraduwa"/>
+        <untitled-ontology-6:hasCenter rdf:resource="http://www.semanticweb.org/user/ontologies/2024/11/untitled-ontology-6#Hiniduma"/>
+        <untitled-ontology-6:hasCenter rdf:resource="http://www.semanticweb.org/user/ontologies/2024/11/untitled-ontology-6#Karandeniya"/>
+        <untitled-ontology-6:hasCenter rdf:resource="http://www.semanticweb.org/user/ontologies/2024/11/untitled-ontology-6#Ratgama"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/user/ontologies/2024/11/untitled-ontology-6#GalleAgent -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/user/ontologies/2024/11/untitled-ontology-6#GalleAgent">
+        <rdf:type rdf:resource="http://www.semanticweb.org/user/ontologies/2024/11/untitled-ontology-6#DistrictAgent"/>
+        <untitled-ontology-6:TotalCountA rdf:datatype="http://www.w3.org/2001/XMLSchema#int">0</untitled-ontology-6:TotalCountA>
+        <untitled-ontology-6:TotalCountB rdf:datatype="http://www.w3.org/2001/XMLSchema#int">0</untitled-ontology-6:TotalCountB>
+        <untitled-ontology-6:TotalCountC rdf:datatype="http://www.w3.org/2001/XMLSchema#int">0</untitled-ontology-6:TotalCountC>
+        <untitled-ontology-6:TotalCountD rdf:datatype="http://www.w3.org/2001/XMLSchema#int">0</untitled-ontology-6:TotalCountD>
+        <untitled-ontology-6:TotalCountE rdf:datatype="http://www.w3.org/2001/XMLSchema#int">0</untitled-ontology-6:TotalCountE>
+        <untitled-ontology-6:TotalCountF rdf:datatype="http://www.w3.org/2001/XMLSchema#int">0</untitled-ontology-6:TotalCountF>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/user/ontologies/2024/11/untitled-ontology-6#Galle_div -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/user/ontologies/2024/11/untitled-ontology-6#Galle_div">
+        <rdf:type rdf:resource="http://www.semanticweb.org/user/ontologies/2024/11/untitled-ontology-6#VotingCenter"/>
+        <untitled-ontology-6:hasDivisionAgent rdf:resource="http://www.semanticweb.org/user/ontologies/2024/11/untitled-ontology-6#PollingAgent6"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/user/ontologies/2024/11/untitled-ontology-6#Habaraduwa -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/user/ontologies/2024/11/untitled-ontology-6#Habaraduwa">
+        <rdf:type rdf:resource="http://www.semanticweb.org/user/ontologies/2024/11/untitled-ontology-6#VotingCenter"/>
+        <untitled-ontology-6:hasDivisionAgent rdf:resource="http://www.semanticweb.org/user/ontologies/2024/11/untitled-ontology-6#PollingAgent7"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/user/ontologies/2024/11/untitled-ontology-6#Hambanthota -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/user/ontologies/2024/11/untitled-ontology-6#Hambanthota">
+        <rdf:type rdf:resource="http://www.semanticweb.org/user/ontologies/2024/11/untitled-ontology-6#District"/>
+        <untitled-ontology-6:hasCenter rdf:resource="http://www.semanticweb.org/user/ontologies/2024/11/untitled-ontology-6#Beliatta"/>
+        <untitled-ontology-6:hasCenter rdf:resource="http://www.semanticweb.org/user/ontologies/2024/11/untitled-ontology-6#Mulkirigala"/>
+        <untitled-ontology-6:hasCenter rdf:resource="http://www.semanticweb.org/user/ontologies/2024/11/untitled-ontology-6#Tangalle"/>
+        <untitled-ontology-6:hasCenter rdf:resource="http://www.semanticweb.org/user/ontologies/2024/11/untitled-ontology-6#Tissamaharama"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/user/ontologies/2024/11/untitled-ontology-6#HambantotaAgent -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/user/ontologies/2024/11/untitled-ontology-6#HambantotaAgent">
+        <rdf:type rdf:resource="http://www.semanticweb.org/user/ontologies/2024/11/untitled-ontology-6#DistrictAgent"/>
+        <untitled-ontology-6:TotalCountA rdf:datatype="http://www.w3.org/2001/XMLSchema#int">0</untitled-ontology-6:TotalCountA>
+        <untitled-ontology-6:TotalCountB rdf:datatype="http://www.w3.org/2001/XMLSchema#int">0</untitled-ontology-6:TotalCountB>
+        <untitled-ontology-6:TotalCountC rdf:datatype="http://www.w3.org/2001/XMLSchema#int">0</untitled-ontology-6:TotalCountC>
+        <untitled-ontology-6:TotalCountD rdf:datatype="http://www.w3.org/2001/XMLSchema#int">0</untitled-ontology-6:TotalCountD>
+        <untitled-ontology-6:TotalCountE rdf:datatype="http://www.w3.org/2001/XMLSchema#int">0</untitled-ontology-6:TotalCountE>
+        <untitled-ontology-6:TotalCountF rdf:datatype="http://www.w3.org/2001/XMLSchema#int">0</untitled-ontology-6:TotalCountF>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/user/ontologies/2024/11/untitled-ontology-6#Hiniduma -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/user/ontologies/2024/11/untitled-ontology-6#Hiniduma">
+        <rdf:type rdf:resource="http://www.semanticweb.org/user/ontologies/2024/11/untitled-ontology-6#VotingCenter"/>
+        <untitled-ontology-6:hasDivisionAgent rdf:resource="http://www.semanticweb.org/user/ontologies/2024/11/untitled-ontology-6#PollingAgent8"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/user/ontologies/2024/11/untitled-ontology-6#Karandeniya -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/user/ontologies/2024/11/untitled-ontology-6#Karandeniya">
+        <rdf:type rdf:resource="http://www.semanticweb.org/user/ontologies/2024/11/untitled-ontology-6#VotingCenter"/>
+        <untitled-ontology-6:hasDivisionAgent rdf:resource="http://www.semanticweb.org/user/ontologies/2024/11/untitled-ontology-6#PollingAgent9"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/user/ontologies/2024/11/untitled-ontology-6#Monaragala -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/user/ontologies/2024/11/untitled-ontology-6#Monaragala">
+        <rdf:type rdf:resource="http://www.semanticweb.org/user/ontologies/2024/11/untitled-ontology-6#District"/>
+        <untitled-ontology-6:hasCenter rdf:resource="http://www.semanticweb.org/user/ontologies/2024/11/untitled-ontology-6#Bibila"/>
+        <untitled-ontology-6:hasCenter rdf:resource="http://www.semanticweb.org/user/ontologies/2024/11/untitled-ontology-6#Moneragala"/>
+        <untitled-ontology-6:hasCenter rdf:resource="http://www.semanticweb.org/user/ontologies/2024/11/untitled-ontology-6#Wallawaya"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/user/ontologies/2024/11/untitled-ontology-6#MonaragalaAgent -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/user/ontologies/2024/11/untitled-ontology-6#MonaragalaAgent">
+        <rdf:type rdf:resource="http://www.semanticweb.org/user/ontologies/2024/11/untitled-ontology-6#DistrictAgent"/>
+        <untitled-ontology-6:TotalCountA rdf:datatype="http://www.w3.org/2001/XMLSchema#int">0</untitled-ontology-6:TotalCountA>
+        <untitled-ontology-6:TotalCountB rdf:datatype="http://www.w3.org/2001/XMLSchema#int">0</untitled-ontology-6:TotalCountB>
+        <untitled-ontology-6:TotalCountC rdf:datatype="http://www.w3.org/2001/XMLSchema#int">0</untitled-ontology-6:TotalCountC>
+        <untitled-ontology-6:TotalCountD rdf:datatype="http://www.w3.org/2001/XMLSchema#int">0</untitled-ontology-6:TotalCountD>
+        <untitled-ontology-6:TotalCountE rdf:datatype="http://www.w3.org/2001/XMLSchema#int">0</untitled-ontology-6:TotalCountE>
+        <untitled-ontology-6:TotalCountF rdf:datatype="http://www.w3.org/2001/XMLSchema#int">0</untitled-ontology-6:TotalCountF>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/user/ontologies/2024/11/untitled-ontology-6#Moneragala -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/user/ontologies/2024/11/untitled-ontology-6#Moneragala">
+        <rdf:type rdf:resource="http://www.semanticweb.org/user/ontologies/2024/11/untitled-ontology-6#VotingCenter"/>
+        <untitled-ontology-6:hasDivisionAgent rdf:resource="http://www.semanticweb.org/user/ontologies/2024/11/untitled-ontology-6#PollingAgent16"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/user/ontologies/2024/11/untitled-ontology-6#Mulkirigala -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/user/ontologies/2024/11/untitled-ontology-6#Mulkirigala">
+        <rdf:type rdf:resource="http://www.semanticweb.org/user/ontologies/2024/11/untitled-ontology-6#VotingCenter"/>
+        <untitled-ontology-6:hasDivisionAgent rdf:resource="http://www.semanticweb.org/user/ontologies/2024/11/untitled-ontology-6#PollingAgent12"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/user/ontologies/2024/11/untitled-ontology-6#PartA -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/user/ontologies/2024/11/untitled-ontology-6#PartA"/>
+    
+
+
+    <!-- http://www.semanticweb.org/user/ontologies/2024/11/untitled-ontology-6#PartyB -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/user/ontologies/2024/11/untitled-ontology-6#PartyB"/>
+    
+
+
+    <!-- http://www.semanticweb.org/user/ontologies/2024/11/untitled-ontology-6#PartyC -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/user/ontologies/2024/11/untitled-ontology-6#PartyC"/>
+    
+
+
+    <!-- http://www.semanticweb.org/user/ontologies/2024/11/untitled-ontology-6#PartyD -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/user/ontologies/2024/11/untitled-ontology-6#PartyD"/>
+    
+
+
+    <!-- http://www.semanticweb.org/user/ontologies/2024/11/untitled-ontology-6#PartyE -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/user/ontologies/2024/11/untitled-ontology-6#PartyE"/>
+    
+
+
+    <!-- http://www.semanticweb.org/user/ontologies/2024/11/untitled-ontology-6#PartyF -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/user/ontologies/2024/11/untitled-ontology-6#PartyF"/>
+    
+
+
+    <!-- http://www.semanticweb.org/user/ontologies/2024/11/untitled-ontology-6#PollingAgent1 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/user/ontologies/2024/11/untitled-ontology-6#PollingAgent1">
+        <rdf:type rdf:resource="http://www.semanticweb.org/user/ontologies/2024/11/untitled-ontology-6#PollingDivisionAgent"/>
+        <untitled-ontology-6:hasWorkingAgents rdf:resource="http://www.semanticweb.org/user/ontologies/2024/11/untitled-ontology-6#CountingAgent1"/>
+        <untitled-ontology-6:hasWorkingAgents rdf:resource="http://www.semanticweb.org/user/ontologies/2024/11/untitled-ontology-6#cameraAgent1"/>
+        <untitled-ontology-6:reported rdf:resource="http://www.semanticweb.org/user/ontologies/2024/11/untitled-ontology-6#GalleAgent"/>
+        <untitled-ontology-6:VotecountPartyA rdf:datatype="http://www.w3.org/2001/XMLSchema#int">0</untitled-ontology-6:VotecountPartyA>
+        <untitled-ontology-6:VotecountPartyB rdf:datatype="http://www.w3.org/2001/XMLSchema#int">0</untitled-ontology-6:VotecountPartyB>
+        <untitled-ontology-6:VotecountPartyC rdf:datatype="http://www.w3.org/2001/XMLSchema#int">0</untitled-ontology-6:VotecountPartyC>
+        <untitled-ontology-6:VotecountPartyD rdf:datatype="http://www.w3.org/2001/XMLSchema#int">0</untitled-ontology-6:VotecountPartyD>
+        <untitled-ontology-6:VotecountPartyE rdf:datatype="http://www.w3.org/2001/XMLSchema#int">0</untitled-ontology-6:VotecountPartyE>
+        <untitled-ontology-6:VotecountPartyF rdf:datatype="http://www.w3.org/2001/XMLSchema#int">0</untitled-ontology-6:VotecountPartyF>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/user/ontologies/2024/11/untitled-ontology-6#PollingAgent10 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/user/ontologies/2024/11/untitled-ontology-6#PollingAgent10">
+        <rdf:type rdf:resource="http://www.semanticweb.org/user/ontologies/2024/11/untitled-ontology-6#PollingDivisionAgent"/>
+        <untitled-ontology-6:hasWorkingAgents rdf:resource="http://www.semanticweb.org/user/ontologies/2024/11/untitled-ontology-6#CameraAgent10"/>
+        <untitled-ontology-6:hasWorkingAgents rdf:resource="http://www.semanticweb.org/user/ontologies/2024/11/untitled-ontology-6#CountingAgent10"/>
+        <untitled-ontology-6:reported rdf:resource="http://www.semanticweb.org/user/ontologies/2024/11/untitled-ontology-6#GalleAgent"/>
+        <untitled-ontology-6:VotecountPartyA rdf:datatype="http://www.w3.org/2001/XMLSchema#int">0</untitled-ontology-6:VotecountPartyA>
+        <untitled-ontology-6:VotecountPartyB rdf:datatype="http://www.w3.org/2001/XMLSchema#int">0</untitled-ontology-6:VotecountPartyB>
+        <untitled-ontology-6:VotecountPartyC rdf:datatype="http://www.w3.org/2001/XMLSchema#int">0</untitled-ontology-6:VotecountPartyC>
+        <untitled-ontology-6:VotecountPartyD rdf:datatype="http://www.w3.org/2001/XMLSchema#int">0</untitled-ontology-6:VotecountPartyD>
+        <untitled-ontology-6:VotecountPartyE rdf:datatype="http://www.w3.org/2001/XMLSchema#int">0</untitled-ontology-6:VotecountPartyE>
+        <untitled-ontology-6:VotecountPartyF rdf:datatype="http://www.w3.org/2001/XMLSchema#int">0</untitled-ontology-6:VotecountPartyF>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/user/ontologies/2024/11/untitled-ontology-6#PollingAgent11 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/user/ontologies/2024/11/untitled-ontology-6#PollingAgent11">
+        <rdf:type rdf:resource="http://www.semanticweb.org/user/ontologies/2024/11/untitled-ontology-6#PollingDivisionAgent"/>
+        <untitled-ontology-6:hasWorkingAgents rdf:resource="http://www.semanticweb.org/user/ontologies/2024/11/untitled-ontology-6#CameraAgent11"/>
+        <untitled-ontology-6:hasWorkingAgents rdf:resource="http://www.semanticweb.org/user/ontologies/2024/11/untitled-ontology-6#CountingAgent11"/>
+        <untitled-ontology-6:reported rdf:resource="http://www.semanticweb.org/user/ontologies/2024/11/untitled-ontology-6#HambantotaAgent"/>
+        <untitled-ontology-6:VotecountPartyA rdf:datatype="http://www.w3.org/2001/XMLSchema#int">0</untitled-ontology-6:VotecountPartyA>
+        <untitled-ontology-6:VotecountPartyB rdf:datatype="http://www.w3.org/2001/XMLSchema#int">0</untitled-ontology-6:VotecountPartyB>
+        <untitled-ontology-6:VotecountPartyC rdf:datatype="http://www.w3.org/2001/XMLSchema#int">0</untitled-ontology-6:VotecountPartyC>
+        <untitled-ontology-6:VotecountPartyD rdf:datatype="http://www.w3.org/2001/XMLSchema#int">0</untitled-ontology-6:VotecountPartyD>
+        <untitled-ontology-6:VotecountPartyE rdf:datatype="http://www.w3.org/2001/XMLSchema#int">0</untitled-ontology-6:VotecountPartyE>
+        <untitled-ontology-6:VotecountPartyF rdf:datatype="http://www.w3.org/2001/XMLSchema#int">0</untitled-ontology-6:VotecountPartyF>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/user/ontologies/2024/11/untitled-ontology-6#PollingAgent12 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/user/ontologies/2024/11/untitled-ontology-6#PollingAgent12">
+        <rdf:type rdf:resource="http://www.semanticweb.org/user/ontologies/2024/11/untitled-ontology-6#PollingDivisionAgent"/>
+        <untitled-ontology-6:hasWorkingAgents rdf:resource="http://www.semanticweb.org/user/ontologies/2024/11/untitled-ontology-6#CameraAgent12"/>
+        <untitled-ontology-6:hasWorkingAgents rdf:resource="http://www.semanticweb.org/user/ontologies/2024/11/untitled-ontology-6#CountingAgent12"/>
+        <untitled-ontology-6:reported rdf:resource="http://www.semanticweb.org/user/ontologies/2024/11/untitled-ontology-6#HambantotaAgent"/>
+        <untitled-ontology-6:VotecountPartyA rdf:datatype="http://www.w3.org/2001/XMLSchema#int">0</untitled-ontology-6:VotecountPartyA>
+        <untitled-ontology-6:VotecountPartyB rdf:datatype="http://www.w3.org/2001/XMLSchema#int">0</untitled-ontology-6:VotecountPartyB>
+        <untitled-ontology-6:VotecountPartyC rdf:datatype="http://www.w3.org/2001/XMLSchema#int">0</untitled-ontology-6:VotecountPartyC>
+        <untitled-ontology-6:VotecountPartyD rdf:datatype="http://www.w3.org/2001/XMLSchema#int">0</untitled-ontology-6:VotecountPartyD>
+        <untitled-ontology-6:VotecountPartyE rdf:datatype="http://www.w3.org/2001/XMLSchema#int">0</untitled-ontology-6:VotecountPartyE>
+        <untitled-ontology-6:VotecountPartyF rdf:datatype="http://www.w3.org/2001/XMLSchema#int">0</untitled-ontology-6:VotecountPartyF>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/user/ontologies/2024/11/untitled-ontology-6#PollingAgent13 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/user/ontologies/2024/11/untitled-ontology-6#PollingAgent13">
+        <rdf:type rdf:resource="http://www.semanticweb.org/user/ontologies/2024/11/untitled-ontology-6#PollingDivisionAgent"/>
+        <untitled-ontology-6:hasWorkingAgents rdf:resource="http://www.semanticweb.org/user/ontologies/2024/11/untitled-ontology-6#CameraAgent13"/>
+        <untitled-ontology-6:hasWorkingAgents rdf:resource="http://www.semanticweb.org/user/ontologies/2024/11/untitled-ontology-6#CountingAgent13"/>
+        <untitled-ontology-6:reported rdf:resource="http://www.semanticweb.org/user/ontologies/2024/11/untitled-ontology-6#HambantotaAgent"/>
+        <untitled-ontology-6:VotecountPartyA rdf:datatype="http://www.w3.org/2001/XMLSchema#int">0</untitled-ontology-6:VotecountPartyA>
+        <untitled-ontology-6:VotecountPartyB rdf:datatype="http://www.w3.org/2001/XMLSchema#int">0</untitled-ontology-6:VotecountPartyB>
+        <untitled-ontology-6:VotecountPartyC rdf:datatype="http://www.w3.org/2001/XMLSchema#int">0</untitled-ontology-6:VotecountPartyC>
+        <untitled-ontology-6:VotecountPartyD rdf:datatype="http://www.w3.org/2001/XMLSchema#int">0</untitled-ontology-6:VotecountPartyD>
+        <untitled-ontology-6:VotecountPartyE rdf:datatype="http://www.w3.org/2001/XMLSchema#int">0</untitled-ontology-6:VotecountPartyE>
+        <untitled-ontology-6:VotecountPartyF rdf:datatype="http://www.w3.org/2001/XMLSchema#int">0</untitled-ontology-6:VotecountPartyF>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/user/ontologies/2024/11/untitled-ontology-6#PollingAgent14 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/user/ontologies/2024/11/untitled-ontology-6#PollingAgent14">
+        <rdf:type rdf:resource="http://www.semanticweb.org/user/ontologies/2024/11/untitled-ontology-6#PollingDivisionAgent"/>
+        <untitled-ontology-6:hasWorkingAgents rdf:resource="http://www.semanticweb.org/user/ontologies/2024/11/untitled-ontology-6#CameraAgent14"/>
+        <untitled-ontology-6:hasWorkingAgents rdf:resource="http://www.semanticweb.org/user/ontologies/2024/11/untitled-ontology-6#CountingAgent14"/>
+        <untitled-ontology-6:reported rdf:resource="http://www.semanticweb.org/user/ontologies/2024/11/untitled-ontology-6#HambantotaAgent"/>
+        <untitled-ontology-6:VotecountPartyA rdf:datatype="http://www.w3.org/2001/XMLSchema#int">0</untitled-ontology-6:VotecountPartyA>
+        <untitled-ontology-6:VotecountPartyB rdf:datatype="http://www.w3.org/2001/XMLSchema#int">0</untitled-ontology-6:VotecountPartyB>
+        <untitled-ontology-6:VotecountPartyC rdf:datatype="http://www.w3.org/2001/XMLSchema#int">0</untitled-ontology-6:VotecountPartyC>
+        <untitled-ontology-6:VotecountPartyD rdf:datatype="http://www.w3.org/2001/XMLSchema#int">0</untitled-ontology-6:VotecountPartyD>
+        <untitled-ontology-6:VotecountPartyE rdf:datatype="http://www.w3.org/2001/XMLSchema#int">0</untitled-ontology-6:VotecountPartyE>
+        <untitled-ontology-6:VotecountPartyF rdf:datatype="http://www.w3.org/2001/XMLSchema#int">0</untitled-ontology-6:VotecountPartyF>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/user/ontologies/2024/11/untitled-ontology-6#PollingAgent15 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/user/ontologies/2024/11/untitled-ontology-6#PollingAgent15">
+        <rdf:type rdf:resource="http://www.semanticweb.org/user/ontologies/2024/11/untitled-ontology-6#PollingDivisionAgent"/>
+        <untitled-ontology-6:hasWorkingAgents rdf:resource="http://www.semanticweb.org/user/ontologies/2024/11/untitled-ontology-6#CameraAgent15"/>
+        <untitled-ontology-6:hasWorkingAgents rdf:resource="http://www.semanticweb.org/user/ontologies/2024/11/untitled-ontology-6#CountingAgent15"/>
+        <untitled-ontology-6:reported rdf:resource="http://www.semanticweb.org/user/ontologies/2024/11/untitled-ontology-6#MonaragalaAgent"/>
+        <untitled-ontology-6:VotecountPartyA rdf:datatype="http://www.w3.org/2001/XMLSchema#int">0</untitled-ontology-6:VotecountPartyA>
+        <untitled-ontology-6:VotecountPartyB rdf:datatype="http://www.w3.org/2001/XMLSchema#int">0</untitled-ontology-6:VotecountPartyB>
+        <untitled-ontology-6:VotecountPartyC rdf:datatype="http://www.w3.org/2001/XMLSchema#int">0</untitled-ontology-6:VotecountPartyC>
+        <untitled-ontology-6:VotecountPartyD rdf:datatype="http://www.w3.org/2001/XMLSchema#int">0</untitled-ontology-6:VotecountPartyD>
+        <untitled-ontology-6:VotecountPartyE rdf:datatype="http://www.w3.org/2001/XMLSchema#int">0</untitled-ontology-6:VotecountPartyE>
+        <untitled-ontology-6:VotecountPartyF rdf:datatype="http://www.w3.org/2001/XMLSchema#int">0</untitled-ontology-6:VotecountPartyF>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/user/ontologies/2024/11/untitled-ontology-6#PollingAgent16 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/user/ontologies/2024/11/untitled-ontology-6#PollingAgent16">
+        <rdf:type rdf:resource="http://www.semanticweb.org/user/ontologies/2024/11/untitled-ontology-6#PollingDivisionAgent"/>
+        <untitled-ontology-6:hasWorkingAgents rdf:resource="http://www.semanticweb.org/user/ontologies/2024/11/untitled-ontology-6#CamerAgent16"/>
+        <untitled-ontology-6:hasWorkingAgents rdf:resource="http://www.semanticweb.org/user/ontologies/2024/11/untitled-ontology-6#CountingAgent16"/>
+        <untitled-ontology-6:reported rdf:resource="http://www.semanticweb.org/user/ontologies/2024/11/untitled-ontology-6#MonaragalaAgent"/>
+        <untitled-ontology-6:VotecountPartyA rdf:datatype="http://www.w3.org/2001/XMLSchema#int">0</untitled-ontology-6:VotecountPartyA>
+        <untitled-ontology-6:VotecountPartyB rdf:datatype="http://www.w3.org/2001/XMLSchema#int">0</untitled-ontology-6:VotecountPartyB>
+        <untitled-ontology-6:VotecountPartyC rdf:datatype="http://www.w3.org/2001/XMLSchema#int">0</untitled-ontology-6:VotecountPartyC>
+        <untitled-ontology-6:VotecountPartyD rdf:datatype="http://www.w3.org/2001/XMLSchema#int">0</untitled-ontology-6:VotecountPartyD>
+        <untitled-ontology-6:VotecountPartyE rdf:datatype="http://www.w3.org/2001/XMLSchema#int">0</untitled-ontology-6:VotecountPartyE>
+        <untitled-ontology-6:VotecountPartyF rdf:datatype="http://www.w3.org/2001/XMLSchema#int">0</untitled-ontology-6:VotecountPartyF>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/user/ontologies/2024/11/untitled-ontology-6#PollingAgent17 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/user/ontologies/2024/11/untitled-ontology-6#PollingAgent17">
+        <rdf:type rdf:resource="http://www.semanticweb.org/user/ontologies/2024/11/untitled-ontology-6#PollingDivisionAgent"/>
+        <untitled-ontology-6:hasWorkingAgents rdf:resource="http://www.semanticweb.org/user/ontologies/2024/11/untitled-ontology-6#CameraAgent17"/>
+        <untitled-ontology-6:hasWorkingAgents rdf:resource="http://www.semanticweb.org/user/ontologies/2024/11/untitled-ontology-6#CountingAgent17"/>
+        <untitled-ontology-6:reported rdf:resource="http://www.semanticweb.org/user/ontologies/2024/11/untitled-ontology-6#MonaragalaAgent"/>
+        <untitled-ontology-6:VotecountPartyA rdf:datatype="http://www.w3.org/2001/XMLSchema#int">0</untitled-ontology-6:VotecountPartyA>
+        <untitled-ontology-6:VotecountPartyB rdf:datatype="http://www.w3.org/2001/XMLSchema#int">0</untitled-ontology-6:VotecountPartyB>
+        <untitled-ontology-6:VotecountPartyC rdf:datatype="http://www.w3.org/2001/XMLSchema#int">0</untitled-ontology-6:VotecountPartyC>
+        <untitled-ontology-6:VotecountPartyD rdf:datatype="http://www.w3.org/2001/XMLSchema#int">0</untitled-ontology-6:VotecountPartyD>
+        <untitled-ontology-6:VotecountPartyE rdf:datatype="http://www.w3.org/2001/XMLSchema#int">0</untitled-ontology-6:VotecountPartyE>
+        <untitled-ontology-6:VotecountPartyF rdf:datatype="http://www.w3.org/2001/XMLSchema#int">0</untitled-ontology-6:VotecountPartyF>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/user/ontologies/2024/11/untitled-ontology-6#PollingAgent2 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/user/ontologies/2024/11/untitled-ontology-6#PollingAgent2">
+        <rdf:type rdf:resource="http://www.semanticweb.org/user/ontologies/2024/11/untitled-ontology-6#PollingDivisionAgent"/>
+        <untitled-ontology-6:hasWorkingAgents rdf:resource="http://www.semanticweb.org/user/ontologies/2024/11/untitled-ontology-6#CameraAgent2"/>
+        <untitled-ontology-6:hasWorkingAgents rdf:resource="http://www.semanticweb.org/user/ontologies/2024/11/untitled-ontology-6#CountingAgent2"/>
+        <untitled-ontology-6:reported rdf:resource="http://www.semanticweb.org/user/ontologies/2024/11/untitled-ontology-6#GalleAgent"/>
+        <untitled-ontology-6:VotecountPartyA rdf:datatype="http://www.w3.org/2001/XMLSchema#int">0</untitled-ontology-6:VotecountPartyA>
+        <untitled-ontology-6:VotecountPartyB rdf:datatype="http://www.w3.org/2001/XMLSchema#int">0</untitled-ontology-6:VotecountPartyB>
+        <untitled-ontology-6:VotecountPartyC rdf:datatype="http://www.w3.org/2001/XMLSchema#int">0</untitled-ontology-6:VotecountPartyC>
+        <untitled-ontology-6:VotecountPartyD rdf:datatype="http://www.w3.org/2001/XMLSchema#int">0</untitled-ontology-6:VotecountPartyD>
+        <untitled-ontology-6:VotecountPartyE rdf:datatype="http://www.w3.org/2001/XMLSchema#int">0</untitled-ontology-6:VotecountPartyE>
+        <untitled-ontology-6:VotecountPartyF rdf:datatype="http://www.w3.org/2001/XMLSchema#int">0</untitled-ontology-6:VotecountPartyF>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/user/ontologies/2024/11/untitled-ontology-6#PollingAgent3 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/user/ontologies/2024/11/untitled-ontology-6#PollingAgent3">
+        <rdf:type rdf:resource="http://www.semanticweb.org/user/ontologies/2024/11/untitled-ontology-6#PollingDivisionAgent"/>
+        <untitled-ontology-6:hasWorkingAgents rdf:resource="http://www.semanticweb.org/user/ontologies/2024/11/untitled-ontology-6#CameraAgent3"/>
+        <untitled-ontology-6:hasWorkingAgents rdf:resource="http://www.semanticweb.org/user/ontologies/2024/11/untitled-ontology-6#CountingAgent3"/>
+        <untitled-ontology-6:reported rdf:resource="http://www.semanticweb.org/user/ontologies/2024/11/untitled-ontology-6#GalleAgent"/>
+        <untitled-ontology-6:VotecountPartyA rdf:datatype="http://www.w3.org/2001/XMLSchema#int">0</untitled-ontology-6:VotecountPartyA>
+        <untitled-ontology-6:VotecountPartyB rdf:datatype="http://www.w3.org/2001/XMLSchema#int">0</untitled-ontology-6:VotecountPartyB>
+        <untitled-ontology-6:VotecountPartyC rdf:datatype="http://www.w3.org/2001/XMLSchema#int">0</untitled-ontology-6:VotecountPartyC>
+        <untitled-ontology-6:VotecountPartyD rdf:datatype="http://www.w3.org/2001/XMLSchema#int">0</untitled-ontology-6:VotecountPartyD>
+        <untitled-ontology-6:VotecountPartyE rdf:datatype="http://www.w3.org/2001/XMLSchema#int">0</untitled-ontology-6:VotecountPartyE>
+        <untitled-ontology-6:VotecountPartyF rdf:datatype="http://www.w3.org/2001/XMLSchema#int">0</untitled-ontology-6:VotecountPartyF>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/user/ontologies/2024/11/untitled-ontology-6#PollingAgent4 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/user/ontologies/2024/11/untitled-ontology-6#PollingAgent4">
+        <rdf:type rdf:resource="http://www.semanticweb.org/user/ontologies/2024/11/untitled-ontology-6#PollingDivisionAgent"/>
+        <untitled-ontology-6:hasWorkingAgents rdf:resource="http://www.semanticweb.org/user/ontologies/2024/11/untitled-ontology-6#CameraAgent4"/>
+        <untitled-ontology-6:hasWorkingAgents rdf:resource="http://www.semanticweb.org/user/ontologies/2024/11/untitled-ontology-6#CountingAgent4"/>
+        <untitled-ontology-6:reported rdf:resource="http://www.semanticweb.org/user/ontologies/2024/11/untitled-ontology-6#GalleAgent"/>
+        <untitled-ontology-6:VotecountPartyA rdf:datatype="http://www.w3.org/2001/XMLSchema#int">0</untitled-ontology-6:VotecountPartyA>
+        <untitled-ontology-6:VotecountPartyB rdf:datatype="http://www.w3.org/2001/XMLSchema#int">0</untitled-ontology-6:VotecountPartyB>
+        <untitled-ontology-6:VotecountPartyC rdf:datatype="http://www.w3.org/2001/XMLSchema#int">0</untitled-ontology-6:VotecountPartyC>
+        <untitled-ontology-6:VotecountPartyD rdf:datatype="http://www.w3.org/2001/XMLSchema#int">0</untitled-ontology-6:VotecountPartyD>
+        <untitled-ontology-6:VotecountPartyE rdf:datatype="http://www.w3.org/2001/XMLSchema#int">0</untitled-ontology-6:VotecountPartyE>
+        <untitled-ontology-6:VotecountPartyF rdf:datatype="http://www.w3.org/2001/XMLSchema#int">0</untitled-ontology-6:VotecountPartyF>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/user/ontologies/2024/11/untitled-ontology-6#PollingAgent5 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/user/ontologies/2024/11/untitled-ontology-6#PollingAgent5">
+        <rdf:type rdf:resource="http://www.semanticweb.org/user/ontologies/2024/11/untitled-ontology-6#PollingDivisionAgent"/>
+        <untitled-ontology-6:hasWorkingAgents rdf:resource="http://www.semanticweb.org/user/ontologies/2024/11/untitled-ontology-6#CameraAgent5"/>
+        <untitled-ontology-6:hasWorkingAgents rdf:resource="http://www.semanticweb.org/user/ontologies/2024/11/untitled-ontology-6#CountingAgent5"/>
+        <untitled-ontology-6:reported rdf:resource="http://www.semanticweb.org/user/ontologies/2024/11/untitled-ontology-6#GalleAgent"/>
+        <untitled-ontology-6:VotecountPartyA rdf:datatype="http://www.w3.org/2001/XMLSchema#int">0</untitled-ontology-6:VotecountPartyA>
+        <untitled-ontology-6:VotecountPartyB rdf:datatype="http://www.w3.org/2001/XMLSchema#int">0</untitled-ontology-6:VotecountPartyB>
+        <untitled-ontology-6:VotecountPartyC rdf:datatype="http://www.w3.org/2001/XMLSchema#int">0</untitled-ontology-6:VotecountPartyC>
+        <untitled-ontology-6:VotecountPartyD rdf:datatype="http://www.w3.org/2001/XMLSchema#int">0</untitled-ontology-6:VotecountPartyD>
+        <untitled-ontology-6:VotecountPartyE rdf:datatype="http://www.w3.org/2001/XMLSchema#int">0</untitled-ontology-6:VotecountPartyE>
+        <untitled-ontology-6:VotecountPartyF rdf:datatype="http://www.w3.org/2001/XMLSchema#int">0</untitled-ontology-6:VotecountPartyF>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/user/ontologies/2024/11/untitled-ontology-6#PollingAgent6 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/user/ontologies/2024/11/untitled-ontology-6#PollingAgent6">
+        <rdf:type rdf:resource="http://www.semanticweb.org/user/ontologies/2024/11/untitled-ontology-6#PollingDivisionAgent"/>
+        <untitled-ontology-6:hasWorkingAgents rdf:resource="http://www.semanticweb.org/user/ontologies/2024/11/untitled-ontology-6#CameraAgent6"/>
+        <untitled-ontology-6:hasWorkingAgents rdf:resource="http://www.semanticweb.org/user/ontologies/2024/11/untitled-ontology-6#CountingAgent6"/>
+        <untitled-ontology-6:reported rdf:resource="http://www.semanticweb.org/user/ontologies/2024/11/untitled-ontology-6#GalleAgent"/>
+        <untitled-ontology-6:VotecountPartyA rdf:datatype="http://www.w3.org/2001/XMLSchema#int">0</untitled-ontology-6:VotecountPartyA>
+        <untitled-ontology-6:VotecountPartyB rdf:datatype="http://www.w3.org/2001/XMLSchema#int">0</untitled-ontology-6:VotecountPartyB>
+        <untitled-ontology-6:VotecountPartyC rdf:datatype="http://www.w3.org/2001/XMLSchema#int">0</untitled-ontology-6:VotecountPartyC>
+        <untitled-ontology-6:VotecountPartyD rdf:datatype="http://www.w3.org/2001/XMLSchema#int">0</untitled-ontology-6:VotecountPartyD>
+        <untitled-ontology-6:VotecountPartyE rdf:datatype="http://www.w3.org/2001/XMLSchema#int">0</untitled-ontology-6:VotecountPartyE>
+        <untitled-ontology-6:VotecountPartyF rdf:datatype="http://www.w3.org/2001/XMLSchema#int">0</untitled-ontology-6:VotecountPartyF>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/user/ontologies/2024/11/untitled-ontology-6#PollingAgent7 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/user/ontologies/2024/11/untitled-ontology-6#PollingAgent7">
+        <rdf:type rdf:resource="http://www.semanticweb.org/user/ontologies/2024/11/untitled-ontology-6#PollingDivisionAgent"/>
+        <untitled-ontology-6:hasWorkingAgents rdf:resource="http://www.semanticweb.org/user/ontologies/2024/11/untitled-ontology-6#CountingAgent7"/>
+        <untitled-ontology-6:hasWorkingAgents rdf:resource="http://www.semanticweb.org/user/ontologies/2024/11/untitled-ontology-6#cameraAgent7"/>
+        <untitled-ontology-6:reported rdf:resource="http://www.semanticweb.org/user/ontologies/2024/11/untitled-ontology-6#GalleAgent"/>
+        <untitled-ontology-6:VotecountPartyA rdf:datatype="http://www.w3.org/2001/XMLSchema#int">0</untitled-ontology-6:VotecountPartyA>
+        <untitled-ontology-6:VotecountPartyB rdf:datatype="http://www.w3.org/2001/XMLSchema#int">0</untitled-ontology-6:VotecountPartyB>
+        <untitled-ontology-6:VotecountPartyC rdf:datatype="http://www.w3.org/2001/XMLSchema#int">0</untitled-ontology-6:VotecountPartyC>
+        <untitled-ontology-6:VotecountPartyD rdf:datatype="http://www.w3.org/2001/XMLSchema#int">0</untitled-ontology-6:VotecountPartyD>
+        <untitled-ontology-6:VotecountPartyE rdf:datatype="http://www.w3.org/2001/XMLSchema#int">0</untitled-ontology-6:VotecountPartyE>
+        <untitled-ontology-6:VotecountPartyF rdf:datatype="http://www.w3.org/2001/XMLSchema#int">0</untitled-ontology-6:VotecountPartyF>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/user/ontologies/2024/11/untitled-ontology-6#PollingAgent8 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/user/ontologies/2024/11/untitled-ontology-6#PollingAgent8">
+        <rdf:type rdf:resource="http://www.semanticweb.org/user/ontologies/2024/11/untitled-ontology-6#PollingDivisionAgent"/>
+        <untitled-ontology-6:hasWorkingAgents rdf:resource="http://www.semanticweb.org/user/ontologies/2024/11/untitled-ontology-6#CameraAgent8"/>
+        <untitled-ontology-6:hasWorkingAgents rdf:resource="http://www.semanticweb.org/user/ontologies/2024/11/untitled-ontology-6#CountingAgent8"/>
+        <untitled-ontology-6:reported rdf:resource="http://www.semanticweb.org/user/ontologies/2024/11/untitled-ontology-6#GalleAgent"/>
+        <untitled-ontology-6:VotecountPartyA rdf:datatype="http://www.w3.org/2001/XMLSchema#int">0</untitled-ontology-6:VotecountPartyA>
+        <untitled-ontology-6:VotecountPartyB rdf:datatype="http://www.w3.org/2001/XMLSchema#int">0</untitled-ontology-6:VotecountPartyB>
+        <untitled-ontology-6:VotecountPartyC rdf:datatype="http://www.w3.org/2001/XMLSchema#int">0</untitled-ontology-6:VotecountPartyC>
+        <untitled-ontology-6:VotecountPartyD rdf:datatype="http://www.w3.org/2001/XMLSchema#int">0</untitled-ontology-6:VotecountPartyD>
+        <untitled-ontology-6:VotecountPartyE rdf:datatype="http://www.w3.org/2001/XMLSchema#int">0</untitled-ontology-6:VotecountPartyE>
+        <untitled-ontology-6:VotecountPartyF rdf:datatype="http://www.w3.org/2001/XMLSchema#int">0</untitled-ontology-6:VotecountPartyF>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/user/ontologies/2024/11/untitled-ontology-6#PollingAgent9 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/user/ontologies/2024/11/untitled-ontology-6#PollingAgent9">
+        <rdf:type rdf:resource="http://www.semanticweb.org/user/ontologies/2024/11/untitled-ontology-6#PollingDivisionAgent"/>
+        <untitled-ontology-6:hasWorkingAgents rdf:resource="http://www.semanticweb.org/user/ontologies/2024/11/untitled-ontology-6#CameraAgent9"/>
+        <untitled-ontology-6:hasWorkingAgents rdf:resource="http://www.semanticweb.org/user/ontologies/2024/11/untitled-ontology-6#CountingAgent9"/>
+        <untitled-ontology-6:reported rdf:resource="http://www.semanticweb.org/user/ontologies/2024/11/untitled-ontology-6#GalleAgent"/>
+        <untitled-ontology-6:VotecountPartyA rdf:datatype="http://www.w3.org/2001/XMLSchema#int">0</untitled-ontology-6:VotecountPartyA>
+        <untitled-ontology-6:VotecountPartyB rdf:datatype="http://www.w3.org/2001/XMLSchema#int">0</untitled-ontology-6:VotecountPartyB>
+        <untitled-ontology-6:VotecountPartyC rdf:datatype="http://www.w3.org/2001/XMLSchema#int">0</untitled-ontology-6:VotecountPartyC>
+        <untitled-ontology-6:VotecountPartyD rdf:datatype="http://www.w3.org/2001/XMLSchema#int">0</untitled-ontology-6:VotecountPartyD>
+        <untitled-ontology-6:VotecountPartyE rdf:datatype="http://www.w3.org/2001/XMLSchema#int">0</untitled-ontology-6:VotecountPartyE>
+        <untitled-ontology-6:VotecountPartyF rdf:datatype="http://www.w3.org/2001/XMLSchema#int">0</untitled-ontology-6:VotecountPartyF>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/user/ontologies/2024/11/untitled-ontology-6#Ratgama -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/user/ontologies/2024/11/untitled-ontology-6#Ratgama">
+        <rdf:type rdf:resource="http://www.semanticweb.org/user/ontologies/2024/11/untitled-ontology-6#VotingCenter"/>
+        <untitled-ontology-6:hasDivisionAgent rdf:resource="http://www.semanticweb.org/user/ontologies/2024/11/untitled-ontology-6#PollingAgent10"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/user/ontologies/2024/11/untitled-ontology-6#Tangalle -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/user/ontologies/2024/11/untitled-ontology-6#Tangalle">
+        <rdf:type rdf:resource="http://www.semanticweb.org/user/ontologies/2024/11/untitled-ontology-6#VotingCenter"/>
+        <untitled-ontology-6:hasDivisionAgent rdf:resource="http://www.semanticweb.org/user/ontologies/2024/11/untitled-ontology-6#PollingAgent13"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/user/ontologies/2024/11/untitled-ontology-6#Tissamaharama -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/user/ontologies/2024/11/untitled-ontology-6#Tissamaharama">
+        <rdf:type rdf:resource="http://www.semanticweb.org/user/ontologies/2024/11/untitled-ontology-6#VotingCenter"/>
+        <untitled-ontology-6:hasDivisionAgent rdf:resource="http://www.semanticweb.org/user/ontologies/2024/11/untitled-ontology-6#PollingAgent14"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/user/ontologies/2024/11/untitled-ontology-6#Votecountcenter1 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/user/ontologies/2024/11/untitled-ontology-6#Votecountcenter1"/>
+    
+
+
+    <!-- http://www.semanticweb.org/user/ontologies/2024/11/untitled-ontology-6#Votecountcenter10 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/user/ontologies/2024/11/untitled-ontology-6#Votecountcenter10"/>
+    
+
+
+    <!-- http://www.semanticweb.org/user/ontologies/2024/11/untitled-ontology-6#Votecountcenter11 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/user/ontologies/2024/11/untitled-ontology-6#Votecountcenter11"/>
+    
+
+
+    <!-- http://www.semanticweb.org/user/ontologies/2024/11/untitled-ontology-6#Votecountcenter12 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/user/ontologies/2024/11/untitled-ontology-6#Votecountcenter12"/>
+    
+
+
+    <!-- http://www.semanticweb.org/user/ontologies/2024/11/untitled-ontology-6#Votecountcenter13 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/user/ontologies/2024/11/untitled-ontology-6#Votecountcenter13"/>
+    
+
+
+    <!-- http://www.semanticweb.org/user/ontologies/2024/11/untitled-ontology-6#Votecountcenter14 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/user/ontologies/2024/11/untitled-ontology-6#Votecountcenter14"/>
+    
+
+
+    <!-- http://www.semanticweb.org/user/ontologies/2024/11/untitled-ontology-6#Votecountcenter15 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/user/ontologies/2024/11/untitled-ontology-6#Votecountcenter15"/>
+    
+
+
+    <!-- http://www.semanticweb.org/user/ontologies/2024/11/untitled-ontology-6#Votecountcenter16 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/user/ontologies/2024/11/untitled-ontology-6#Votecountcenter16"/>
+    
+
+
+    <!-- http://www.semanticweb.org/user/ontologies/2024/11/untitled-ontology-6#Votecountcenter17 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/user/ontologies/2024/11/untitled-ontology-6#Votecountcenter17"/>
+    
+
+
+    <!-- http://www.semanticweb.org/user/ontologies/2024/11/untitled-ontology-6#Votecountcenter2 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/user/ontologies/2024/11/untitled-ontology-6#Votecountcenter2"/>
+    
+
+
+    <!-- http://www.semanticweb.org/user/ontologies/2024/11/untitled-ontology-6#Votecountcenter3 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/user/ontologies/2024/11/untitled-ontology-6#Votecountcenter3"/>
+    
+
+
+    <!-- http://www.semanticweb.org/user/ontologies/2024/11/untitled-ontology-6#Votecountcenter4 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/user/ontologies/2024/11/untitled-ontology-6#Votecountcenter4"/>
+    
+
+
+    <!-- http://www.semanticweb.org/user/ontologies/2024/11/untitled-ontology-6#Votecountcenter5 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/user/ontologies/2024/11/untitled-ontology-6#Votecountcenter5"/>
+    
+
+
+    <!-- http://www.semanticweb.org/user/ontologies/2024/11/untitled-ontology-6#Votecountcenter6 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/user/ontologies/2024/11/untitled-ontology-6#Votecountcenter6"/>
+    
+
+
+    <!-- http://www.semanticweb.org/user/ontologies/2024/11/untitled-ontology-6#Votecountcenter7 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/user/ontologies/2024/11/untitled-ontology-6#Votecountcenter7"/>
+    
+
+
+    <!-- http://www.semanticweb.org/user/ontologies/2024/11/untitled-ontology-6#Votecountcenter8 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/user/ontologies/2024/11/untitled-ontology-6#Votecountcenter8"/>
+    
+
+
+    <!-- http://www.semanticweb.org/user/ontologies/2024/11/untitled-ontology-6#Votecountcenter9 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/user/ontologies/2024/11/untitled-ontology-6#Votecountcenter9"/>
+    
+
+
+    <!-- http://www.semanticweb.org/user/ontologies/2024/11/untitled-ontology-6#Wallawaya -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/user/ontologies/2024/11/untitled-ontology-6#Wallawaya">
+        <rdf:type rdf:resource="http://www.semanticweb.org/user/ontologies/2024/11/untitled-ontology-6#VotingCenter"/>
+        <untitled-ontology-6:hasDivisionAgent rdf:resource="http://www.semanticweb.org/user/ontologies/2024/11/untitled-ontology-6#PollingAgent17"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/user/ontologies/2024/11/untitled-ontology-6#cameraAgent1 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/user/ontologies/2024/11/untitled-ontology-6#cameraAgent1">
+        <rdf:type rdf:resource="http://www.semanticweb.org/user/ontologies/2024/11/untitled-ontology-6#CameraAgent"/>
+        <untitled-ontology-6:Workswith rdf:resource="http://www.semanticweb.org/user/ontologies/2024/11/untitled-ontology-6#CountingAgent1"/>
+        <untitled-ontology-6:aggregated rdf:resource="http://www.semanticweb.org/user/ontologies/2024/11/untitled-ontology-6#PollingAgent1"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/user/ontologies/2024/11/untitled-ontology-6#cameraAgent7 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/user/ontologies/2024/11/untitled-ontology-6#cameraAgent7">
+        <rdf:type rdf:resource="http://www.semanticweb.org/user/ontologies/2024/11/untitled-ontology-6#CameraAgent"/>
+        <untitled-ontology-6:Workswith rdf:resource="http://www.semanticweb.org/user/ontologies/2024/11/untitled-ontology-6#CountingAgent7"/>
+        <untitled-ontology-6:aggregated rdf:resource="http://www.semanticweb.org/user/ontologies/2024/11/untitled-ontology-6#PollingAgent7"/>
+    </owl:NamedIndividual>
+</rdf:RDF>
+
+
+
+<!-- Generated by the OWL API (version 4.5.29.2024-05-13T12:11:03Z) https://github.com/owlcs/owlapi -->
+

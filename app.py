@@ -6,7 +6,7 @@ app = Flask(__name__, template_folder='template')
 UNTITLED = Namespace("http://www.semanticweb.org/user/ontologies/2024/11/untitled-ontology-6#")
 
 g = Graph()
-g.parse("updated_ontology1.owl")
+g.parse("updated_ontology2.owl")
 
 def get_district_agents_data():
     query = """
@@ -26,7 +26,7 @@ def get_district_agents_data():
     results = g.query(query)
     district_data= [
         {
-            "District": str(row.DistrictAgent).replace("http://www.semanticweb.org/user/ontologies/2024/11/untitled-ontology-6#", ""),
+            "District": str(row.DistrictAgent).replace("http://www.semanticweb.org/user/ontologies/2024/11/untitled-ontology-6#", "").replace("Agent",""),
             "PartyA": int(row.TotalCountA),
             "PartyB": int(row.TotalCountB),
             "PartyC": int(row.TotalCountC),
@@ -41,7 +41,8 @@ def get_polling_agents_data():
 
     query = """
     PREFIX untitled: <http://www.semanticweb.org/user/ontologies/2024/11/untitled-ontology-6#>
-    SELECT ?PollingAgent ?VotingCenter ?VotecountPartyA ?VotecountPartyB ?VotecountPartyC ?VotecountPartyD ?VotecountPartyE ?VotecountPartyF
+    SELECT ?PollingAgent ?VotingCenter ?VotecountPartyA ?VotecountPartyB 
+    ?VotecountPartyC ?VotecountPartyD ?VotecountPartyE ?VotecountPartyF
     WHERE {
         ?VotingCenter a untitled:VotingCenter ;
                   untitled:hasDivisionAgent ?PollingAgent .
@@ -71,6 +72,7 @@ def get_polling_agents_data():
     return data
 
 @app.route("/")
+
 def index():
     data = get_polling_agents_data()
     district_data=get_district_agents_data()
