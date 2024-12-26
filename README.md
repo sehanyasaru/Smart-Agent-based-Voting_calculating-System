@@ -1,4 +1,5 @@
 ![Vizo](https://github.com/user-attachments/assets/cf0e342c-bbd5-425c-857a-f3d6ce97e988)
+
 This system is designed to automate the vote counting process in **Sri Lanka's elections** using real-time camera integration for ballot image recognition. The system uses distributed agents to process images of ballots, count votes, and update a central database for real-time results.
 
 ![1733840476844](https://github.com/user-attachments/assets/be013bc4-e7f4-48f5-822b-25dce5b72f9b)
